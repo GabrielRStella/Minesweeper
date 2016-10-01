@@ -1,0 +1,7 @@
+*.class
+*.xml
+*.mf
+*.properties
+dist/README.TXT
+build/classes/.netbeans_update_resources
+build/classes/.netbeans_automatic_build
