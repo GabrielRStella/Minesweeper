@@ -24,14 +24,14 @@ public class Images {
 //    public static final BufferedImage MINE = getImage("mine");
 //    public static final BufferedImage TILE = getImage("tile");
     
-    public static final File DIR = new File("res/");
+//    public static final File DIR = new File("res/");
     
     public static BufferedImage getImage(String s) {
-        File f = new File(DIR, s + ".png");
+//        File f = new File(DIR, s + ".png");
         try {
-            return ImageIO.read(f);
+            return ImageIO.read(Images.class.getResourceAsStream("/res/" + s + ".png"));
         } catch (IOException ex) {
-            Logger.getLogger(Images.class.getName()).log(Level.SEVERE, "Failed to load image: " + f, ex);
+            Logger.getLogger(Images.class.getName()).log(Level.SEVERE, "Failed to load image: " + s, ex);
             return null;
         }
     }
